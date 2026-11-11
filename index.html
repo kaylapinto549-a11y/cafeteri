@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aroma y Grano, una experiencia de café, panadería y desayunos en Canalete, Córdoba.">
+  <title>Aroma y Grano | Cafetería</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <a href="#inicio" class="logo">
+    <span class="logo-icon">☕</span>
+    <span>Aroma <b>&</b> Grano<small>CAFÉ CON ESENCIA</small></span>
+  </a>
+
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+
+  <nav id="navMenu">
+    <a href="#inicio">Inicio</a>
+    <a href="#historia">Nuestra historia</a>
+    <a href="#menu">Carta</a>
+    <a href="#reservas">Reservas</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <a href="#reservas" class="header-btn">Reservar mesa</a>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <span class="eyebrow">UN RINCÓN PARA DISFRUTAR</span>
+      <h1>El aroma que<br>hace especial <em>cada momento.</em></h1>
+      <p>Más que café, creamos momentos inolvidables. Descubre sabores únicos, pan recién horneado y el placer de disfrutar sin prisa.</p>
+      <div class="hero-buttons">
+        <a href="#menu" class="btn-primary">Descubrir nuestra carta</a>
+        <a href="#reservas" class="btn-outline">Reservar una mesa</a>
+      </div>
+      <div class="hero-note">✦ Café preparado con amor, servido con pasión.</div>
+    </div>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1100&q=85" alt="Taza de café recién preparado">
+      <div class="floating-card">
+        <span>☕</span>
+        <div><strong>Un buen café</strong><small>Un momento perfecto</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div><span>☕</span><strong>Café especial</strong><small>Sabores que enamoran</small></div>
+    <div><span>🥐</span><strong>Recién horneado</strong><small>Frescura en cada bocado</small></div>
+    <div><span>♡</span><strong>Ambiente acogedor</strong><small>Un espacio para compartir</small></div>
+  </section>
+
+  <section class="story section" id="historia">
+    <div class="story-image">
+      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=950&q=85" alt="Preparación artesanal del café">
+      <div class="image-label">Momentos con sabor a café</div>
+    </div>
+    <div class="story-content">
+      <span class="eyebrow">NUESTRA ESENCIA</span>
+      <h2>Una historia que comienza con el aroma del café</h2>
+      <p>En Aroma y Grano creemos que los pequeños momentos pueden convertirse en grandes recuerdos.</p>
+      <p>Nacimos con la ilusión de crear un lugar especial donde cada taza tenga su propia historia, donde el aroma del café recién preparado se mezcle con el sabor de la panadería y la calidez de una buena conversación.</p>
+      <p>Queremos que cada visita sea una experiencia para disfrutar, compartir y regresar.</p>
+      <a href="#menu" class="text-link">Conoce nuestros sabores →</a>
+    </div>
+  </section>
+
+  <section class="menu-section section" id="menu">
+    <div class="section-heading">
+      <span class="eyebrow">SABORES QUE ENAMORAN</span>
+      <h2>Nuestra carta</h2>
+      <p>Encuentra tu próximo favorito entre nuestras preparaciones.</p>
+    </div>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="cafes">☕ Cafés</button>
+      <button class="tab" data-tab="frias">❄ Bebidas frías</button>
+      <button class="tab" data-tab="panaderia">🥐 Panadería</button>
+      <button class="tab" data-tab="desayunos">🍳 Desayunos</button>
+    </div>
+
+    <div class="menu-grid" id="menuGrid"></div>
+    <p class="menu-note">* Precios de referencia en pesos colombianos. Pueden actualizarse según disponibilidad.</p>
+  </section>
+
+  <section class="quote-section">
+    <div>
+      <span>❝</span>
+      <h2>La vida es demasiado corta para tomar un café malo.</h2>
+      <p>Haz una pausa, respira y disfruta el momento.</p>
+    </div>
+  </section>
+
+  <section class="reservation section" id="reservas">
+    <div class="reservation-info">
+      <span class="eyebrow">TE ESPERAMOS</span>
+      <h2>Tu mesa favorita te está esperando</h2>
+      <p>Planea tu próxima visita. Completa el formulario y envíanos tu solicitud de reserva por WhatsApp.</p>
+      <div class="schedule-card">
+        <h3>🕒 Nuestro horario</h3>
+        <p>Lunes a sábado: 7:00 a. m. – 8:00 p. m.</p>
+        <p>Domingos: 8:00 a. m. – 2:00 p. m.</p>
+        <div id="statusIndicator" class="status closed">
+          <span class="status-dot"></span>
+          <span id="statusText">Consultando horario...</span>
+        </div>
+      </div>
+      <img class="reservation-image" src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=850&q=85" alt="Interior acogedor de cafetería">
+    </div>
+
+    <form id="reservationForm" class="reservation-form">
+      <h3>Reserva tu experiencia</h3>
+      <p>Completa tus datos para solicitar tu mesa.</p>
+
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+      <label for="correo">Correo electrónico</label>
+      <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+
+      <label for="fecha">Fecha de reserva</label>
+      <input type="date" id="fecha" name="fecha" required>
+
+      <label for="hora">Hora de reserva</label>
+      <input type="time" id="hora" name="hora" required>
+
+      <label for="personas">Número de personas</label>
+      <select id="personas" name="personas" required>
+        <option value="">Selecciona una opción</option>
+        <option value="1 persona">1 persona</option>
+        <option value="2 personas">2 personas</option>
+        <option value="3 personas">3 personas</option>
+        <option value="4 personas">4 personas</option>
+        <option value="5 personas">5 personas</option>
+        <option value="6 personas">6 personas</option>
+        <option value="7 o más personas">7 o más personas</option>
+      </select>
+
+      <button type="submit" class="btn-primary submit-btn">Enviar solicitud de reserva →</button>
+      <small class="form-note">Tu reserva quedará pendiente de confirmación por parte de la cafetería.</small>
+    </form>
+  </section>
+
+  <section class="contact-section section" id="contacto">
+    <div class="section-heading">
+      <span class="eyebrow">VEN A VISITARNOS</span>
+      <h2>Estamos cerca de ti</h2>
+      <p>Un lugar especial para disfrutar en Canalete.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <span>📍</span>
+        <h3>Ubicación</h3>
+        <p>Canalete, Córdoba, Colombia</p>
+      </div>
+      <div class="contact-card">
+        <span>📱</span>
+        <h3>Contáctanos</h3>
+        <p>300 164 0580</p>
+      </div>
+      <div class="contact-card">
+        <span>☕</span>
+        <h3>Te esperamos</h3>
+        <p>Ven a compartir un momento delicioso.</p>
+      </div>
+    </div>
+
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps?q=Canalete,Cordoba,Colombia&output=embed"
+        width="100%" height="350" style="border:0"
+        loading="lazy" allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Mapa de Canalete, Córdoba">
+      </iframe>
+    </div>
+
+    <a href="#" id="contactWhats" class="btn-primary contact-btn">Escríbenos por WhatsApp</a>
+  </section>
+</main>
+
+<footer class="footer">
+  <a href="#inicio" class="footer-logo">☕ Aroma & Grano</a>
+  <p>El sabor de los buenos momentos.</p>
+  <div class="footer-line"></div>
+  <small>© 2026 Aroma y Grano. Todos los derechos reservados.</small>
+</footer>
+
+<a href="#" id="whatsappFloat" class="whatsapp-float" aria-label="Contactar por WhatsApp">✆</a>
+
+<script src="script.js"></script>
+</body>
+</html>
